@@ -18,8 +18,6 @@ class Container extends \Magento\Backend\Block\Template implements ContainerInte
     const PARAM_CONTROLLER = 'controller';
 
     const PARAM_HEADER_TEXT = 'header_text';
-    
-    const PARAM_BLOCK_GROUP = 'block_group';
 
     /**#@-*/
 
@@ -68,10 +66,6 @@ class Container extends \Magento\Backend\Block\Template implements ContainerInte
         parent::_construct();
         if ($this->hasData(self::PARAM_CONTROLLER)) {
             $this->_controller = $this->_getData(self::PARAM_CONTROLLER);
-        }
-        
-        if ($this->hasData(self::PARAM_BLOCK_GROUP)) {
-            $this->_blockGroup = $this->_getData(self::PARAM_BLOCK_GROUP);
         }
         
         if ($this->hasData(self::PARAM_HEADER_TEXT)) {
